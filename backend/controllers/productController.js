@@ -1,6 +1,5 @@
 const productModel = require("../models/productModel");
 const { createCustomError } = require("../middleware/Errors");
-const { async } = require("regenerator-runtime");
 exports.getAllProducts = async (req, res, next) => {
     const products = await productModel.find();
     res.status(200).json({products : products})
