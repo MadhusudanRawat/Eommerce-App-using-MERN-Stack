@@ -6,7 +6,7 @@ const cors = require("cors");
 const { connectDatabase } = require("./config/database");
 const errorHandlerMiddleware = require("./middleware/erroe-handler")
 const app = express();
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 80
 
 console.log(
     process.env.MONGODB_URL
